@@ -47,8 +47,8 @@ export default function App() {
                 <Text style={styles.bottom_component_text2}>di ser Piero</Text>
               </View>
               <View style={styles.bottom_component_text}>
-                <Text style={styles.bottom_component_text1}>Nick Name</Text>
-                <Text style={styles.bottom_component_text2}>di ser Piero</Text>
+                <Text style={styles.bottom_component_text1}>Emengency Contact</Text>
+                <Text style={styles.bottom_component_text2}>+39 (0) 338 523 1764</Text>
                 <View style={styles.ted_icon}>{tedIcon}</View>
               </View>
             </View>
@@ -114,16 +114,6 @@ const styles = StyleSheet.create({
     marginTop: 65,
     justifyContent: "center",
     alignItems: "center",
-
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 11,
-    },
-    shadowOpacity: 0.57,
-    shadowRadius: 15.19,
-
-    elevation: 23,
   },
   image_container_text: {
     backgroundColor: "#fff",
@@ -132,7 +122,14 @@ const styles = StyleSheet.create({
     width: 353,
     borderRadius: 5,
     top: 50,
-    marginHorizontal: 10,
+    
+    shadowColor: 'rgba(0,0,0, .4)', // IOS
+    shadowOffset: { height: 1, width: 1 }, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 1, //IOS
+    
+     // Android
+    
   },
   secIcon: {
     position: "absolute",
@@ -195,7 +192,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     marginVertical: 30,
-    fontSize: 70,
+    fontSize: 50,
    
   },
   button_inner: {
@@ -204,7 +201,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 50,
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     overflow: 'hidden',
     paddingHorizontal: 70,
