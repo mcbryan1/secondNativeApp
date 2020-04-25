@@ -53,8 +53,8 @@ export default function App() {
               </View>
             </View>
             <View style={styles.button}>
-              <TouchableOpacity >
-                <Text style={styles.button_inner}>Click Me!</Text>
+              <TouchableOpacity style={styles.button_outer}>
+                <Text style={styles.button_inner}>Update Profile</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -196,17 +196,31 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 30,
     fontSize: 70,
+   
   },
   button_inner: {
-    backgroundColor: 'blue',
-    borderColor: 'white',
+    backgroundColor: 'rgb(85, 168, 241)',
+    borderColor: 'rgb(85, 168, 241)',
     borderWidth: 1,
-    borderRadius: 12,
-    color: 'rgb(85, 168, 241)',
+    borderRadius: 50,
+    color: 'white',
     fontSize: 24,
     fontWeight: 'bold',
     overflow: 'hidden',
-    padding: 12,
+    paddingHorizontal: 70,
+    paddingVertical: 15,
     textAlign:'center',
   },
+  button_outer:{
+    shadowColor: 'rgba(0,0,0, .4)', // IOS
+    shadowOffset: { height: 1, width: 1 }, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 1, //IOS
+    backgroundColor: '#fff',
+    elevation: 2, // Android
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    borderRadius: 50,
+  }
 });
